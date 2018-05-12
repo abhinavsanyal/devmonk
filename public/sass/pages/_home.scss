@@ -14,7 +14,7 @@
     rgba($color-tertiary-light, 0.71),
     rgba($color-tertiary-dark, 0.89) 
      ),
-     url('../img/hero10.jpg');
+     url('../img/Compressed/hero10new.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,7 +44,7 @@
     background-image:linear-gradient(to top,
     rgba($color-grey-light-2, 0.01),
     rgba($color-black, 0.01) 
-     ), url('../img/tiny_grid.png');
+     ), url('../img/Compressed/tiny_grid.png');
     background-repeat: repeat;
     background-position: center;    
     @include respond(tab-port) {
@@ -60,7 +60,7 @@
     background-image:linear-gradient(to top,
     rgba($color-grey-light-2, 0.01),
     rgba($color-black, 0.01) 
-     ), url('../img/tiny_grid.png');
+     ), url('../img/Compressed/tiny_grid.png');
     background-repeat: repeat;
     background-position: center;    
 }
@@ -117,7 +117,7 @@
     rgba($color-grey-light-2,0.9) 0%,
     rgba($color-grey-light-1,0.9) 50%,
     transparent 50%),
-    url('../img/engage.jpg');
+    url('../img/Compressed/engage-min.jpg');
     background-size: cover;
     background-position: center;
     height: 58rem;

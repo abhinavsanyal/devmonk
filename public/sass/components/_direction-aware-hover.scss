@@ -41,8 +41,8 @@ backface-visibility: hidden;
 .overlay{
     position: absolute;
     display: inline-block;
-    background-image:linear-gradient(to right bottom,   rgba($color-tertiary-light, 0.588),
-    rgba($color-tertiary-dark, 0.499) );
+    background-image:linear-gradient(to right bottom,   rgba($color-black, 0.89),
+    rgba($color-tertiary-dark, 0.9) );
      
     background-size: 100%;
     background-position: 100%;
@@ -51,8 +51,8 @@ backface-visibility: hidden;
     backface-visibility: hidden;
 	width: 120%;
 	height: 140%;
-    
 }
+
 
 
 

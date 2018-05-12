@@ -12,7 +12,6 @@ body{
     color: $color-white;
     text-transform: uppercase;
      backface-visibility: hidden; 
-
     &--main{
         display: block;
         font-size: 6rem;
@@ -30,9 +29,9 @@ body{
     &--sub{
         display: block;
         text-decoration: none;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 400;
-        letter-spacing: 1.74rem;
+        letter-spacing: 1.2rem;
         
         @include respond(phone){
             letter-spacing: .5rem;
