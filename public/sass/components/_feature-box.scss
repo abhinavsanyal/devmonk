@@ -28,11 +28,11 @@
     &:hover {
         transform: scale(1.03) translateY(-1.2rem);
 
-        box-shadow: inset 0 0 2rem rgba($color-secondary-light, .75);
+        box-shadow: inset 0 0 .8rem rgba($color-tertiary-light, .75);
 
     }
     &:hover  &__icon{
-        text-shadow: 0 0 10px $color-tertiary-dark;
+        text-shadow: 0 0 .7px $color-tertiary-dark;
         
         color: $color-tertiary-light;
         
@@ -41,8 +41,7 @@
     &:hover .heading-tertiary{
         // text-shadow: 0 0 6px $color-secondary-light;
         // color: $color-secondary-light;
-        text-shadow: 0 0 10px $color-tertiary-dark;
-        
+        text-shadow: 0 0 .7px $color-tertiary-dark;
         color: $color-tertiary-light;
 
     }

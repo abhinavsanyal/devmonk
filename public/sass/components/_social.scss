@@ -1,0 +1,45 @@
+.social {
+    
+    list-style: none;
+    position: fixed;
+    top: 35%;
+    left: 4rem;
+    margin-right: 3rem;
+    z-index: 999;
+    opacity: 0;
+
+    &__item {
+        display: block;
+        background-color: $color-white;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba($color-black,.1);
+        text-align: center;
+        background-image: radial-gradient($color-white 62%,$color-tertiary-light 90%,$color-tertiary-dark 95%);
+        transform: scale(.89);
+        margin-bottom: 3rem;
+
+        &:hover,
+        &:active {
+            color: $color-quad-light;     
+           
+        }
+      
+       
+    }
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+          line-height: 3.2;
+          color: $color-tertiary-light;  
+          
+        }
+        &:hover,
+        &:active {
+          
+        }
+    }
+
+}
