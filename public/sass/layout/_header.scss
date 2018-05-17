@@ -5,7 +5,7 @@
     rgba($color-tertiary-light, 0.788),
     rgba($color-tertiary-dark, 0.699) 
      ),
-     url('../img/Compressed/hero4new.jpg');
+     url('https://s3.ap-south-1.amazonaws.com/devmonks/hero4new.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,6 +44,14 @@
     
    &__logo{
         width: 4.5rem;
+    }
+
+
+    &__logo-text{
+        font-weight: 800;
+        font-size: 1.8;
+        color: $color-white;
+        text-transform: uppercase; 
     }
     
     

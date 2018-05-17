@@ -1,6 +1,6 @@
 .project {
     width: 100%;
-    width: 45%;
+    // width: 45%;
     float: left;
     margin-right: 5%;
     position: relative;
@@ -11,6 +11,11 @@
     position: relative;
     border-radius:5px;
 
+    @include respond(tab-port) {
+      width: 45rem;
+      margin-top: 5rem;
+      
+  }
   }
   
   .project__image div {
@@ -20,6 +25,11 @@
     display: block;
     border-radius:5px;
     background-color:$color-grey-dark-2;
+    @include respond(tab-port) {
+      width: 45rem;
+      margin-top: 5rem;
+      
+  }
 
   }
   
@@ -41,20 +51,32 @@
     }   
     
   }
-  
+
   .project__card {
     position: relative;
     will-change: transform;
     transition: box-shadow .3s ease;
-    box-shadow: 0 10px5px transparent;
+    box-shadow: .4rem 1.6rem 4rem rgba($color-black, .15);
     border-radius:5px;
+    @include respond(tab-port) {
 
+    
+      width: 45rem;
+      margin-top: 5rem;
+      
+  }
   }
   div.shine{
     border-radius:5px;  
     &:hover{
      border-radius:5px !important;
-    }   
+    }
+    
+    @include respond(tab-port) {
+      width: 45rem;
+      margin-top: 5rem;
+      
+  }
   }
 
   .project__card.hover-in {

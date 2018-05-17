@@ -55,6 +55,11 @@
         opacity: 1;
         animation: moveInRight .8s  ease-out .4s;
         animation-fill-mode: backwards;
+        @include respond(tab-port) {
+
+            opacity: 0;
+           
+        }
     }
 
     &__menu-horizontal{
@@ -69,7 +74,7 @@
         position: fixed;
         top: 8rem;
         right: 20rem;
-        z-index: 1500;
+        z-index: 20;
        border-radius: 3px;
        background-color: $color-white;
        color:$color-dark-grey;
@@ -78,6 +83,12 @@
        font-size: 1.3rem;
     
         animation: name duration timing-function delay iteration-count direction fill-mode;
+        @include respond(tab-port) {
+
+           
+            visibility: hidden;
+           
+        }
     }
     &__nav{
         height: 100vh;

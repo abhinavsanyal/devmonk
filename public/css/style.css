@@ -163,6 +163,10 @@ body {
 .u-margin-vertical-auto {
   margin: auto 0 !important; }
 
+.u-unlink:link, .u-unlink:visited {
+  text-decoration: none;
+  color: #333; }
+
 body {
   font-family: lato ,sans-serif;
   font-size: 1.6rem;
@@ -324,15 +328,35 @@ body {
     z-index: 10;
     outline-offset: 2rem;
     transition: all .1s; }
+    @media only screen and (max-width: 56.25em) {
+      .composition__photo {
+        float: left;
+        position: relative;
+        width: 33.33333333%;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); } }
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo--p1 {
+          top: 0;
+          transform: scale(1.2); } }
     .composition__photo--p2 {
       right: 0;
       top: 2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo--p2 {
+          top: -1rem;
+          transform: scale(1.3);
+          z-index: 100; } }
     .composition__photo--p3 {
       left: 20%;
       top: 10rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo--p3 {
+          top: 1rem;
+          left: 0;
+          transform: scale(1.1); } }
     .composition__photo:hover {
       outline: 1.2rem solid #5643fa;
       transform: scale(1.05) translateY(-0.6rem);
@@ -351,6 +375,10 @@ body {
   transition: all .3s;
   perspective: 150rem;
   height: 30rem; }
+  @media only screen and (max-width: 56.25em) {
+    .feature-box {
+      padding: 2rem;
+      height: 100%; } }
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
@@ -360,6 +388,9 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     transition: all .9s; }
+    @media only screen and (max-width: 56.25em) {
+      .feature-box__icon {
+        margin-bottom: 0; } }
   .feature-box:hover {
     transform: scale(1.03) translateY(-1.2rem);
     box-shadow: inset 0 0 0.8rem rgba(41, 152, 255, 0.75); }
@@ -381,6 +412,14 @@ body {
   font-size: 1.6rem;
   transform: skewX(-12deg);
   backface-visibility: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -392,6 +431,9 @@ body {
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     backface-visibility: hidden; }
+    @media only screen and (max-width: 37.5em) {
+      .story__shape {
+        transform: translateX(-3rem) skewX(0); } }
   .story__img {
     height: 100%;
     backface-visibility: hidden;
@@ -416,6 +458,9 @@ body {
     backface-visibility: hidden; }
   .story__text {
     transform: skewX(12deg); }
+    @media only screen and (max-width: 37.5em) {
+      .story__text {
+        transform: skewX(0); } }
   .story:hover .story__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
@@ -455,6 +500,9 @@ body {
   display: block;
   width: 90%;
   transition: all .6s; }
+  @media only screen and (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -480,6 +528,10 @@ body {
 .form__radio-group {
   width: 40%;
   display: inline-block; }
+  @media only screen and (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 2rem; } }
 
 .form__radio-input {
   display: none; }
@@ -530,6 +582,9 @@ body {
   padding-left: 8rem;
   padding-right: 5rem;
   padding-bottom: 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .gallery__list {
+      padding-left: 12rem; } }
 
 .gallery__link, .gallery__link:link, .gallery__link:visited {
   display: block;
@@ -547,6 +602,9 @@ body {
   border-radius: .3rem;
   overflow: hidden;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .gallery__list-item {
+      width: 80%; } }
 
 .gallery__image {
   width: 100%;
@@ -873,7 +931,6 @@ input {
 
 .project {
   width: 100%;
-  width: 45%;
   float: left;
   margin-right: 5%;
   position: relative; }
@@ -882,6 +939,10 @@ input {
   display: block;
   position: relative;
   border-radius: 5px; }
+  @media only screen and (max-width: 56.25em) {
+    .project__image {
+      width: 45rem;
+      margin-top: 5rem; } }
 
 .project__image div {
   width: 100%;
@@ -890,6 +951,10 @@ input {
   display: block;
   border-radius: 5px;
   background-color: #333; }
+  @media only screen and (max-width: 56.25em) {
+    .project__image div {
+      width: 45rem;
+      margin-top: 5rem; } }
 
 .project__image:after {
   content: " ";
@@ -909,13 +974,21 @@ input {
   position: relative;
   will-change: transform;
   transition: box-shadow .3s ease;
-  box-shadow: 0 10px5px transparent;
+  box-shadow: 0.4rem 1.6rem 4rem rgba(0, 0, 0, 0.15);
   border-radius: 5px; }
+  @media only screen and (max-width: 56.25em) {
+    .project__card {
+      width: 45rem;
+      margin-top: 5rem; } }
 
 div.shine {
   border-radius: 5px; }
   div.shine:hover {
     border-radius: 5px !important; }
+  @media only screen and (max-width: 56.25em) {
+    div.shine {
+      width: 45rem;
+      margin-top: 5rem; } }
 
 .project__card.hover-in {
   transition: -webkit-transform .2s ease-out;
@@ -1678,17 +1751,28 @@ div.shine {
 
 .works-step {
   margin-bottom: 50px; }
+  @media only screen and (max-width: 56.25em) {
+    .works-step {
+      margin: 5rem 0 10px 0; } }
 
 .works-step div {
   float: left;
   padding: 5px;
   margin-right: 30px; }
+  @media only screen and (max-width: 56.25em) {
+    .works-step div {
+      width: 100%;
+      margin: 0 auto; } }
 
 .works-step p {
   line-height: 2.8;
   font-size: 1.6rem;
   letter-spacing: 1px;
   text-transform: capitalize; }
+  @media only screen and (max-width: 56.25em) {
+    .works-step p {
+      width: 100%;
+      text-align: center; } }
 
 .social {
   list-style: none;
@@ -1758,7 +1842,7 @@ div.shine {
 
 .header {
   position: relative;
-  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.788), rgba(86, 67, 250, 0.699)), url("../img/Compressed/hero4new.jpg");
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.788), rgba(86, 67, 250, 0.699)), url("https://s3.ap-south-1.amazonaws.com/devmonks/hero4new.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1783,6 +1867,11 @@ div.shine {
     left: 4rem; }
   .header__logo {
     width: 4.5rem; }
+  .header__logo-text {
+    font-weight: 800;
+    font-size: 1.8;
+    color: #fffff4;
+    text-transform: uppercase; }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -1945,6 +2034,9 @@ div.shine {
   opacity: 1;
   animation: moveInRight .8s  ease-out .4s;
   animation-fill-mode: backwards; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__menu-horizontal--animated {
+      opacity: 0; } }
 
 .navigation__menu-horizontal {
   text-transform: uppercase;
@@ -1955,7 +2047,7 @@ div.shine {
   position: fixed;
   top: 8rem;
   right: 20rem;
-  z-index: 1500;
+  z-index: 20;
   border-radius: 3px;
   background-color: #fffff4;
   color: #444444;
@@ -1963,6 +2055,9 @@ div.shine {
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   font-size: 1.3rem;
   animation: name duration timing-function delay iteration-count direction fill-mode; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__menu-horizontal {
+      visibility: hidden; } }
 
 .navigation__nav {
   height: 100vh;
@@ -2060,10 +2155,10 @@ div.shine {
   margin-top: -20vh; }
   @media only screen and (max-width: 56.25em) {
     .section-about {
-      padding: 20rem 0; } }
+      padding: 16rem 0; } }
 
 .section-how-it-works {
-  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.71), rgba(86, 67, 250, 0.89)), url("../img/Compressed/hero10new.jpg");
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.71), rgba(86, 67, 250, 0.89)), url("https://s3.ap-south-1.amazonaws.com/devmonks/hero10new.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2086,7 +2181,7 @@ div.shine {
   background-position: center; }
   @media only screen and (max-width: 56.25em) {
     .section-services {
-      padding: 10rem 0; } }
+      padding: 20rem 0; } }
 
 .section-work {
   background-color: rgba(238, 238, 238, 0.65);
@@ -2122,19 +2217,18 @@ div.shine {
       padding: 10rem 0; } }
 
 .engage {
-  background-image: linear-gradient(105deg, rgba(238, 238, 238, 0.9) 0%, rgba(247, 247, 247, 0.9) 50%, transparent 50%), url("../img/Compressed/engage-min.jpg");
+  background-image: linear-gradient(105deg, rgba(238, 238, 238, 0.9) 0%, rgba(247, 247, 247, 0.9) 50%, transparent 50%), url("https://s3.ap-south-1.amazonaws.com/devmonks/engage-min.jpg");
   background-size: cover;
   background-position: center;
-  height: 58rem;
   border-radius: .3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.26); }
   @media only screen and (max-width: 75em) {
     .engage {
-      background-image: linear-gradient(105deg, rgba(255, 255, 244, 0.9) 0%, rgba(255, 255, 244, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);
+      background-image: linear-gradient(105deg, rgba(255, 255, 244, 0.9) 0%, rgba(255, 255, 244, 0.9) 65%, transparent 65%), url("https://s3.ap-south-1.amazonaws.com/devmonks/engage-min.jpg");
       background-size: cover; } }
   @media only screen and (max-width: 56.25em) {
     .engage {
-      background-image: linear-gradient(to right, rgba(255, 255, 244, 0.9) 0%, rgba(255, 255, 244, 0.9) 100%), url(../img/nat-10.jpg); } }
+      background-image: linear-gradient(to right, rgba(255, 255, 244, 0.9) 0%, rgba(255, 255, 244, 0.9) 100%), url("https://s3.ap-south-1.amazonaws.com/devmonks/engage-min.jpg"); } }
   .engage__form {
     width: 50%;
     padding: 4rem; }

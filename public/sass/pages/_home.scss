@@ -4,7 +4,7 @@
     margin-top: -20vh; 
 
     @include respond(tab-port) {
-        padding: 20rem 0;
+        padding: 16rem 0;
     }
 
 }
@@ -14,7 +14,7 @@
     rgba($color-tertiary-light, 0.71),
     rgba($color-tertiary-dark, 0.89) 
      ),
-     url('../img/Compressed/hero10new.jpg');
+     url('https://s3.ap-south-1.amazonaws.com/devmonks/hero10new.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@
 
     margin-top: -10rem;
     transform: skewY(-7deg);
-    
+
     &>*{
         transform: skewY(7deg);
         
@@ -48,9 +48,8 @@
     background-repeat: repeat;
     background-position: center;    
     @include respond(tab-port) {
-        padding: 10rem 0;
+        padding: 20rem 0;
     }
-  
 }
 
 .section-work{
@@ -117,10 +116,10 @@
     rgba($color-grey-light-2,0.9) 0%,
     rgba($color-grey-light-1,0.9) 50%,
     transparent 50%),
-    url('../img/Compressed/engage-min.jpg');
+    url('https://s3.ap-south-1.amazonaws.com/devmonks/engage-min.jpg');
     background-size: cover;
     background-position: center;
-    height: 58rem;
+   
     border-radius: .3rem;
     box-shadow: 0 1.5rem 4rem rgba($color-black,.26);
 
@@ -129,7 +128,7 @@
         rgba($color-white, .9) 0%,
         rgba($color-white, .9) 65%,
         transparent 65%) ,
-url(../img/nat-10.jpg);
+url('https://s3.ap-south-1.amazonaws.com/devmonks/engage-min.jpg');
         background-size: cover;
     }
 
@@ -137,7 +136,7 @@ url(../img/nat-10.jpg);
         background-image: linear-gradient(to right, 
         rgba($color-white, .9) 0%,
         rgba($color-white, .9) 100%),
-url(../img/nat-10.jpg);
+url('https://s3.ap-south-1.amazonaws.com/devmonks/engage-min.jpg');
     }
 
     &__form{

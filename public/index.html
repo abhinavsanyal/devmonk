@@ -16,7 +16,7 @@
     </head>
     <body>
         <!-- PRELOADER -->
-        <div id="preloader"></div>
+        <!-- <div id="preloader"></div> -->
 
         <div id="scrollbar">
           <div id="scrollbar-bg"></div>
@@ -39,7 +39,7 @@
             <span class="navigation__icon">&nbsp;</span>
           </label>
           <div class="navigation__bg">&nbsp;</div>
-          <div class="navigation__menu-horizontal">Services</div>
+          <div class="navigation__menu-horizontal"> <a href="#section-services" class="u-unlink">Services</a></div>
          
 
           <nav class="navigation__nav">
@@ -56,7 +56,8 @@
         <!-- HEADER -->
         <header class="header"  id="particles-js"> 
             <div class="header__logo-box">
-                <img src="img/Compressed/logo-white.png" alt="logo" class="header__logo">
+              <div class="header__logo-text">devmonk</div>
+                <!-- <img src="img/Compressed/logo-white.png" alt="logo" class="header__logo"> -->
             </div>
             
             <div class="header__text-box">
@@ -65,14 +66,14 @@
                     <span class="heading-primary--sub">We develop software that ignites your business</span>                
                 </h1>
 
-                <a href="#" class="btn btn--white btn--animated u-margin-top-small">discover our work  </a>
+                <a href="#section-work" class="btn btn--white btn--animated u-margin-top-small">discover our work  </a>
             </div>     
         </header>
 
         <!-- MAIN -->
         <main>
           <!-- ABOUT SECTION  -->
-          <section class="section-about">
+          <section class="section-about" id="section-about">
 
             <div class="u-center-text u-margin-bottom-big">
               <h2 class="heading-secondary ">
@@ -89,20 +90,20 @@
                 <p class="paragraph">
                   There are three responses to a piece of software design – yes, no, and wow ! wow is the one we aim for. 
                 </p>
-                <a href="#" class="btn-text">let us talk &rarr;</a>
+                <a href="#section-engage" class="btn-text">let us talk &rarr;</a>
               </div>
               <div class="col-1-of-2">
                 <div class="composition">
-                  <img src="img/Compressed/p1new.gif" alt="" class="composition__photo composition__photo--p1">
-                  <img src="img/Compressed/p2new.gif" alt="" class="composition__photo composition__photo--p2">
-                  <img src="img/Compressed/p3new.gif" alt="" class="composition__photo composition__photo--p3">
+                  <img src="https://s3.ap-south-1.amazonaws.com/devmonks/p1new.gif" alt="" class="composition__photo composition__photo--p1">
+                  <img src="https://s3.ap-south-1.amazonaws.com/devmonks/p2new.gif" alt="" class="composition__photo composition__photo--p2">
+                  <img src="https://s3.ap-south-1.amazonaws.com/devmonks/p3new.gif" alt="" class="composition__photo composition__photo--p3">
                 </div>
               </div>
             </div>
 
           </section>
           <!-- HOW IT WORKS SECTION -->
-          <section class="section-how-it-works">
+          <section class="section-how-it-works" id="section-how-it-works">
             <div class="row">
               <div class="col-1-of-4">
                 <div class="feature-box reveal-feature-box-1">
@@ -146,7 +147,7 @@
          
           </section>
           <!-- SERVICES SECTION -->
-          <section class="section-services">
+          <section class="section-services" id="section-services">
 
               <div class="u-center-text u-margin-bottom-big">
                   <h2 class="heading-secondary ">
@@ -301,7 +302,7 @@
              
           </section>
           <!-- OUR WORK  -->
-          <section class="section-work">
+          <section class="section-work" id="section-work">
 
             <div class="u-center-text u-margin-bottom-big">
               <h2 class="heading-secondary">
@@ -364,13 +365,13 @@
             </ul>
             <div class="u-margin-bottom-big u-center-text">
 
-              <a href="#" class="btn-text">let us talk &rarr;</a>
+              <a href="#section-engage" class="btn-text">let us talk &rarr;</a>
 
             </div>
 
           </section>
           <!-- STORIES SECTION  -->
-          <section class="section-stories">
+          <section class="section-stories" id="section-stories">
 
             <div class="bg-video">
               <video  class="bg-video__content" autoplay muted loop>
@@ -421,12 +422,12 @@
             </div>
 
             <div class="u-center-text u-margin-top-big">
-              <a href="#" class="btn-text">let us talk &rarr;</a>
+              <a href="#section-engage" class="btn-text">let us talk &rarr;</a>
             </div>
 
           </section>
           <!-- ENGAGE SECTION  -->
-          <section class="section-engage">
+          <section class="section-engage" id="section-engage">
 
            
             <div class="row">
@@ -605,23 +606,60 @@
       <script src="scripts/demo3.js"></script>
       <script type="text/javascript">
 
+        // ID ANCHOR TAG SCROLL FUNCTIONALITY
+
+          // Select all links with hashes
+          $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .not('[href="#work-popup"]')
+            .click(function(event) {
+              // On-page links
+              if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+                && 
+                location.hostname == this.hostname
+              ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                  // Only prevent default if animation is actually gonna happen
+                  event.preventDefault();
+                  $('html, body').animate({
+                    scrollTop: target.offset().top
+                  }, 1000, function() {
+                    // Callback after animation
+                    // Must change focus!
+                    // var $target = $(target);
+                    // $target.focus();
+                    // if ($target.is(":focus")) { // Checking if the target was focused
+                    //   return false;
+                    // } else {
+                      // $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                      // $target.focus(); // Set focus again
+                    // };
+                  });
+                }
+              }
+            });
 
 
-          jQuery(document).ready(function($) {
-
-           
-            // site preloader -- also uncomment the div in the header and the css style for #preloader
-           window.onload = function(){
-            
-        
-              $('#preloader').fadeOut('slow',function(){$(this).remove();});
-            }
+         // ONLOAD METHOD PRELOADER FUNCTIONALITY
+        jQuery(document).ready(function($) {          
+          // site preloader -- also uncomment the div in the header and the css style for #preloader
+         window.onload = function(){
+            $('#preloader').fadeOut('slow',function(){$(this).remove();});
+          }
 
         });
 
 
-          $(window).scroll(function() {
-            if ($(this).scrollTop() > 0 && $(this).scrollTop() < 7600) {
+        // lEFT SIDE SOCIAL BUTTONS SCROLL FUNCTIONALITY
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 0 && $(this).scrollTop() < 6000) {
               
               $('.social').css('opacity','1');
               $('.social').fadeIn();
@@ -629,13 +667,12 @@
 
               $('.social').fadeOut();
             }
-          });
+        });
 
 
+     
+        // SERVICES 3D HOVER FUNCTIONALITY
         $(".project").hover3d({
-				      selector: ".project__card"
-			    });
-            $(".project").hover3d({
                 
                   // selector for element
                   selector      : ".project__card",
@@ -661,58 +698,9 @@
                   // Helper class when the mouse is hovering the element
                   hoverClass    : "hover-3d"
 
-            });
+        });
 
 
-            jQuery('.card__button').click(function(){
-
-             
-
-            // $('.popup__song').each(function(){$(this).trigger('play')});
-
-            jQuery('.skillbar').each(function(){
-              jQuery(this).find('.skillbar-bar').animate({
-                width:jQuery(this).attr('data-percent')
-              },1000);
-            });
-          });
-
-            jQuery('#angshu').click(function(){
-
-              $('#popup-angshu').find('.popup__song').animate({volume: .6}, 50);
-             $('#popup-angshu').find('.popup__song').trigger('play');
-          
-            });
-
-            jQuery('#debjit').click(function(){
-              $('#popup-debjit').find('.popup__song').animate({volume: .6}, 50);
-             $('#popup-debjit').find('.popup__song').trigger('play');
-            });
-            jQuery('#kush').click(function(){
-              $('#popup-kush').find('.popup__song').animate({volume: .6}, 50);
-             $('#popup-kush').find('.popup__song').trigger('play');
-            });
-
-
-
-          $('.popup__close').click(
-            function(){
-            console.log("clicked");
-            $('.popup__song').each(function(){$(this).animate({volume: 0}, 1000)});
-
-            setTimeout(function(){
-            $('.popup__song').each(function(){$(this).trigger('pause')});
-            $('.popup__song').each(function(){$(this).prop("currentTime",0)});
-            },1000);
-
-             jQuery('.skillbar').each(function(){
-              jQuery(this).find('.skillbar-bar').animate({
-                width:0
-              },300);
-            });
-
-            }
-          );
 
         // WORK GALLERY DIRCTION AWARE HOVER EFFECT
         $(function() {
@@ -721,26 +709,7 @@
 
         });
         
-        // THREE JS IMAGE DISTORTION ON HOVER
-        	imagesLoaded( document.querySelectorAll('img'), () => {
-
-				document.body.classList.remove('loading');
-			  });
-
-        Array.from(document.querySelectorAll('.grid__item-img')).forEach((el) => {
-          const imgs = Array.from(el.querySelectorAll('img'));
-          new hoverEffect({
-            parent: el,
-            intensity: el.dataset.intensity || undefined,
-            speedIn: el.dataset.speedin || undefined,
-            speedOut: el.dataset.speedout || undefined,
-            easing: el.dataset.easing || undefined,
-            hover: el.dataset.hover || undefined,
-            image1: imgs[0].getAttribute('src'),
-            image2: imgs[1].getAttribute('src'),
-            displacementImage: el.dataset.displacement
-          });
-        });
+      
 
       </script>
     </body>

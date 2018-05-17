@@ -10,6 +10,13 @@
     height: 30rem;
     
 
+    @include respond(tab-port)  {
+       padding: 2rem;
+       height:100%;
+    }
+
+
+
     &__icon{
         font-size: 6rem;
         margin-bottom: .5rem;
@@ -22,6 +29,11 @@
          -webkit-background-clip: text;
          color: transparent;
          transition: all .9s;
+
+         
+    @include respond(tab-port)  {
+       margin-bottom: 0;
+     }
          
     }
 
